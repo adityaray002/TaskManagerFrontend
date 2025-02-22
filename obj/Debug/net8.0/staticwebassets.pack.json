@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "H:\\Entity Framework core\\TaskManager_Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TaskManager_Frontend.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TaskManager_Frontend.bundle.scp.css"
+    },
+    {
+      "Id": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TaskManager_Frontend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.TaskManager_Frontend.props",
+      "PackagePath": "build\\TaskManager_Frontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.TaskManager_Frontend.props",
+      "PackagePath": "buildMultiTargeting\\TaskManager_Frontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.TaskManager_Frontend.props",
+      "PackagePath": "buildTransitive\\TaskManager_Frontend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
