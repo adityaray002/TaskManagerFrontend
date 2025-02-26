@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vyDQZEIUx6XPGpaRYe5OT+B+QWcA+wKy32DMiRR92VU=",
+  "Hash": "uiA/0F/XZKUtSGTUI7poxqctueZsicSjPzG9/Ds6hAo=",
   "Source": "TaskManager_Frontend",
   "BasePath": "_content/TaskManager_Frontend",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.2.0\\staticwebassets\\MudBlazor.min.css",
+      "Identity": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.css",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.2.0\\staticwebassets\\MudBlazor.min.css"
+      "OriginalItemSpec": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.css"
     },
     {
-      "Identity": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.2.0\\staticwebassets\\MudBlazor.min.js",
+      "Identity": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.js",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.2.0\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.js",
       "AssetKind": "All",
@@ -52,7 +52,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.2.0\\staticwebassets\\MudBlazor.min.js"
+      "OriginalItemSpec": "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.js"
     },
     {
       "Identity": "H:\\Entity Framework core\\TaskManager_Frontend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TaskManager_Frontend.styles.css",
@@ -150,6 +150,44 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Identity": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\create (1).svg",
+      "SourceId": "TaskManager_Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\",
+      "BasePath": "_content/TaskManager_Frontend",
+      "RelativePath": "create (1).svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\create (1).svg"
+    },
+    {
+      "Identity": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\create.svg",
+      "SourceId": "TaskManager_Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\",
+      "BasePath": "_content/TaskManager_Frontend",
+      "RelativePath": "create.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\create.svg"
+    },
+    {
       "Identity": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\favicon.png",
       "SourceId": "TaskManager_Frontend",
       "SourceType": "Discovered",
@@ -167,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\site.js",
+      "SourceId": "TaskManager_Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\",
+      "BasePath": "_content/TaskManager_Frontend",
+      "RelativePath": "site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\site.js"
     }
   ]
 }

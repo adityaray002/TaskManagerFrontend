@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uIuc0xftxX8=",
+  "dgSpecHash": "myU8hk1PasQ=",
   "success": true,
   "projectFilePath": "H:\\Entity Framework core\\TaskManager_Frontend\\TaskManager_Frontend.csproj",
   "expectedPackageFiles": [
@@ -18,7 +18,7 @@
     "C:\\Users\\rahul\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
     "C:\\Users\\rahul\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\rahul\\.nuget\\packages\\microsoft.jsinterop\\8.0.12\\microsoft.jsinterop.8.0.12.nupkg.sha512",
-    "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.2.0\\mudblazor.8.2.0.nupkg.sha512",
+    "C:\\Users\\rahul\\.nuget\\packages\\mudblazor\\8.3.0\\mudblazor.8.3.0.nupkg.sha512",
     "C:\\Users\\rahul\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512"
   ],
   "logs": []

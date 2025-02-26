@@ -1,4 +1,7 @@
-﻿@page "/dashboard"
+﻿ @page "/dashboard"
+@using MudBlazor
+@rendermode InteractiveServer
+@using TaskManager_Frontend.Data
 <MudAppBar Fixed="false" Style="background-color : #ffffff;">
     
     <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Dark" Edge="Edge.Start" />
@@ -76,19 +79,14 @@
                         <span class="d-none d-sm-inline mx-1" style="color:black">Aditya Ray</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                        @* <li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li> *@
+                       
                         <li><a class="dropdown-item" href="#">Sign out</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="col ">
-            <p class="fw-bolder fs-4 ms-3">Symbiotic Consulting Group</p>
+            <p class="fw-bolder fs-4 ms-3 py-4">Symbiotic Consulting Group</p>
 
             <div class=" d-flex justify-content-between align-items-center p-2">
                 <div class="col align-text-bottom ">
@@ -103,15 +101,236 @@
             </div>
 
             <div class="d-flex justify-content-between col-3 w-100" style="background-color:#f4f4f4;height:90vh">
-               
+                
+                <div class="col">
+                    <div class="d-flex align-items-center" style="height:16%">
+                        <button @onclick="ShowNewTaskModal">
+                            <img src="create.svg" alt="" style="width:20px;height:20px;margin-left:30px; margin-top:30px;" /><p class="ps-2 fw-bold" style="margin-top:45px;color:#34a853">New</p>
+                        </button>
+                    </div>
+                    <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+                        <div class="card-header" style="background-color:white">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col">
+                    <div class="card text-bg-light mb-3 mt-3" style="max-width: 18rem;">
+                        <div class="card-header" style="background-color:white">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+
+                    <div class="card text-bg-light mb-3 mt-3" style="max-width: 18rem;">
+                        <div class="card-header" style="background-color:white">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 </div>
 
+@if (IsNewTaskModalVisible)
+{
+    <div class="modal-overlay">
+        <div class="modal-box">
+            <h3>Add New Task</h3>
+            <div class="modal-input">
+                <label>Task Title:</label>
+                <input @bind="NewTask.Task_Title" type="text" placeholder="Enter task title..." />
+            </div>
+           <div class="modal-input">
+                 <label>Deadline:</label>
+                 <input @bind="NewTask.TimeStamp" type="date" />
+             </div>
+             <div class="modal-input">
+                 <label>Employee Name:</label>
+                 <select @onchange="OnEmployeeSelectionChanged">
+                     @foreach (var employee in employees)
+                     {
+                         <option value="@employee.emp_Id">@employee.employee_Name</option>
+                     }
+                 </select>
+             </div>
+
+             <div class="modal-input">
+                 <label>Tag Name:</label>
+                 <select @onchange="OnTagSelectionChanged">
+                     @foreach (var tag in tags)
+                     {
+                         <option value="@tag.tag_Id">@tag.tag_Name</option>
+                     }
+                 </select>
+             </div>
+             <div class="modal-input">
+                 <label>Status Name:</label>
+                 <select @onchange="OnStatusSelectionChanged">
+                     @foreach (var status in statuses)
+                     {
+                         <option value="@status.Status_Id">@status.Status_Name</option>
+                     }
+                 </select>
+             </div>
+           
+
+          
+
+        
+
+            <div class="modal-actions">
+                <button class="btn add-btn" @onclick="AddNewTask">Add</button>
+                <button class="btn cancel-btn" @onclick="CloseNewTaskModal">Cancel</button>
+                @if (@error.Length>0)
+                {
+                    <p>@error</p>
+                }
+              
+            </div>
+        </div>
+    </div>
+    
+}
+
+
 
 
 @code {
+  
 
-}
+    private string error = ""; 
+    private TaskModel NewTask = new TaskModel();
+    private List<Employees> EmployeeList = new();
+    private List<int> SelectedEmployeeIds = new();
+    private List<int> SelectedTagId = new();
+    private List<int> SelectedStatusId=new();
+    private bool IsNewTaskModalVisible = false;
+    private List<TaskStatusss> statuses = new List<TaskStatusss>();
+    public HttpClient httpClient = new HttpClient();
+    List<Employees> employees = new List<Employees>();
+    List<Tags> tags = new List<Tags>();
+    protected override async Task OnInitializedAsync()
+    {
+
+
+        var response = await httpClient.GetFromJsonAsync<EmployeeResponse>("https://localhost:7083/getemployees");
+        if (response.value != null)
+        {
+            employees = response.value.ToList();
+            StateHasChanged();
+        }
+        var Tagresponse = await httpClient.GetFromJsonAsync<TagResponse>("https://localhost:7083/getTags");
+        if (Tagresponse.value != null)
+        {
+            tags = Tagresponse.value.ToList();
+            StateHasChanged();
+        }
+        var Statusresponse = await httpClient.GetFromJsonAsync<StatusResponse>("https://localhost:7083/getstatus");
+        if (Statusresponse.value != null)
+        {
+            statuses = Statusresponse.value.ToList();
+            StateHasChanged();
+        }
+
+
+    }
+
+
+    public async void AddNewTask()
+    {
+        NewTask.EmployeeTasks = SelectedEmployeeIds.Select(id => new EmployeeTasks { EmpId = id }).ToList();
+
+        if (SelectedTagId.Count > 0)
+        {
+            NewTask.TaskTags = SelectedTagId.Select(id => new TaskTag { TagId = id }).ToList();
+        }
+
+        NewTask.TaskStatuses = SelectedStatusId.Select(id => new TaskStatuses { StatusId = id }).ToList();
+      
+
+        
+
+      
+
+        NewTask.Deadline = NewTask.TimeStamp.ToString("yyyy-MM-dd");
+
+        HttpClient httpClient = new HttpClient();
+        var response = await httpClient.PostAsJsonAsync("https://localhost:7083/addTask", NewTask);
+
+        if (response.IsSuccessStatusCode)
+        {
+            Console.WriteLine("Task added successfully!");
+            CloseNewTaskModal();
+        }
+        else
+        {
+            Console.WriteLine("Error adding task.");
+          //  error = response.Body.ReadAsStringAsync();
+            StateHasChanged();
+        }
+    }
+    public void ShowNewTaskModal()
+    {
+        IsNewTaskModalVisible=true;
+        StateHasChanged();
+    }
+    private void CloseNewTaskModal()
+    {
+        IsNewTaskModalVisible = false;
+        StateHasChanged();
+    } 
+
+    private void OnEmployeeSelectionChanged(ChangeEventArgs e)
+    {
+        if (e.Value is string selectedValue)
+        {
+            int empId = int.Parse(selectedValue);
+            if (!SelectedEmployeeIds.Contains(empId))
+            {
+                SelectedEmployeeIds.Add(empId);
+            }
+        }
+    }
+
+    private void OnTagSelectionChanged(ChangeEventArgs e)
+    {
+        if (e.Value is string selectedValue)
+        {
+            int tagId = int.Parse(selectedValue);
+            if (!SelectedTagId.Contains(tagId))
+            {
+                SelectedTagId.Add(tagId);
+            }
+        }
+    }
+
+    private void OnStatusSelectionChanged(ChangeEventArgs e)
+    {
+        if (e.Value is string selectedValue)
+        {
+            int statusId = int.Parse(selectedValue);
+            if (!SelectedStatusId.Contains(statusId))
+            {
+                SelectedStatusId.Add(statusId);
+            }
+        }
+    }
+
+   
+
+} 
+
+
+

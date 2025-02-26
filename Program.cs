@@ -1,5 +1,6 @@
 using MudBlazor.Services;
 using TaskManager_Frontend.Components;
+using TaskManager_Frontend.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,20 @@ builder.Services.AddMudServices();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+
+builder.Services.AddScoped<Employees>();
+builder.Services.AddScoped<EmployeeResponse>();
+builder.Services.AddScoped<Tags>();
+builder.Services.AddScoped<TagResponse>();
+builder.Services.AddScoped<TaskModel>();
+builder.Services.AddScoped<TaskTag>();
+builder.Services.AddScoped<TaskStatusss>();
+builder.Services.AddScoped<EmployeeTasks>();
+builder.Services.AddScoped<TaskStatuses>();
+
 var app = builder.Build();
+
+app.UseWebSockets();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

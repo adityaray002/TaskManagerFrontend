@@ -42,3 +42,4 @@ H:\Entity Framework core\TaskManager_Frontend\obj\Debug\net8.0\refint\TaskManage
 H:\Entity Framework core\TaskManager_Frontend\obj\Debug\net8.0\TaskManager_Frontend.pdb
 H:\Entity Framework core\TaskManager_Frontend\obj\Debug\net8.0\TaskManager_Frontend.genruntimeconfig.cache
 H:\Entity Framework core\TaskManager_Frontend\obj\Debug\net8.0\ref\TaskManager_Frontend.dll
+H:\Entity Framework core\TaskManager_Frontend\obj\Debug\net8.0\TaskManager_Frontend.sourcelink.json
