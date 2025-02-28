@@ -2,6 +2,7 @@
 @using MudBlazor
 @rendermode InteractiveServer
 @using TaskManager_Frontend.Data
+@inject IJSRuntime JSRuntime
 <MudAppBar Fixed="false" Style="background-color : #ffffff;">
     
     <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Dark" Edge="Edge.Start" />
@@ -15,7 +16,7 @@
 </MudAppBar>
 
 <div class="container-fluid" >
-    <div class="row flex-nowrap" style="">
+    <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 " style="background-color:#eaeaea;">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                 <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-black text-decoration-none">
@@ -47,25 +48,7 @@
                         </a>
                     </li>
                    
-                    <li>
-                        <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline" style="color:black">Products</span>
-                        </a>
-                        <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                            <li class="w-100">
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
-                            </li>
-                            <li>
-                                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
-                            </li>
-                        </ul>
-                    </li>
+                    
                     <li>
                         <a href="#" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color:black">Customers</span>
@@ -100,47 +83,50 @@
                 </div>
             </div>
 
-            <div class="d-flex justify-content-between col-3 w-100" style="background-color:#f4f4f4;height:90vh">
-                
-                <div class="col">
+            <div class="d-flex justify-content-between col-3 w-100" style="background-color:#f4f4f4;height:100vh">
+                <!-- New Tasks Column -->
+                <div class="col mb-2 mt-2">
                     <div class="d-flex align-items-center" style="height:16%">
                         <button @onclick="ShowNewTaskModal">
-                            <img src="create.svg" alt="" style="width:20px;height:20px;margin-left:30px; margin-top:30px;" /><p class="ps-2 fw-bold" style="margin-top:45px;color:#34a853">New</p>
+                            <img src="create.svg" alt="" style="width:20px;height:20px;margin-left:30px; margin-top:30px;" />
+                            <p class="ps-2 fw-bold" style="margin-top:45px;color:#34a853">New</p>
                         </button>
                     </div>
-                    <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-                        <div class="card-header" style="background-color:white">Header</div>
-                        <div class="card-body">
-                            <h5 class="card-title">Light card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
+                    <div class="col">
+                        @foreach (var task in NewTasks)
+                        {
+                            <TaskCard TaskData="@task" />
+                        }
                     </div>
-                </div>
-                
+                   
 
-                <div class="col">
-                    <div class="card text-bg-light mb-3 mt-3" style="max-width: 18rem;">
-                        <div class="card-header" style="background-color:white">Header</div>
-                        <div class="card-body">
-                            <h5 class="card-title">Light card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
                 </div>
-                <div class="col">
+                    <!-- New Tasks -->
+              
+                <!-- Active Tasks Column -->
+                <div class="col mb-2 mt-2 ">
+                    @foreach (var task in ActiveTasks)
+                    {
+                            <TaskCard TaskData="@task" />
+                        
+                    }
+                </div>
 
-                    <div class="card text-bg-light mb-3 mt-3" style="max-width: 18rem;">
-                        <div class="card-header" style="background-color:white">Header</div>
-                        <div class="card-body">
-                            <h5 class="card-title">Light card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
+                       
+
+                <!-- Completed Tasks Column -->
+                <div class="col mb-2 mt-2 ">
+                    @foreach (var task in CompletedTasks)
+                    {
+                        <TaskCard TaskData="@task" />
+                    }
                 </div>
-            </div>
+             
+
         </div>
 
     </div>
+</div>
 </div>
 
 @if (IsNewTaskModalVisible)
@@ -156,25 +142,46 @@
                  <label>Deadline:</label>
                  <input @bind="NewTask.TimeStamp" type="date" />
              </div>
-             <div class="modal-input">
-                 <label>Employee Name:</label>
-                 <select @onchange="OnEmployeeSelectionChanged">
-                     @foreach (var employee in employees)
-                     {
-                         <option value="@employee.emp_Id">@employee.employee_Name</option>
-                     }
-                 </select>
-             </div>
 
-             <div class="modal-input">
-                 <label>Tag Name:</label>
-                 <select @onchange="OnTagSelectionChanged">
-                     @foreach (var tag in tags)
-                     {
-                         <option value="@tag.tag_Id">@tag.tag_Name</option>
-                     }
-                 </select>
-             </div>
+            <div class="modal-input">
+                <label>Employee Name:</label>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        Select Employees
+                    </button>
+                    <ul class="dropdown-menu" style="width:100%;">
+                        @foreach (var employee in employees)
+                        {
+                            <li class="dropdown-item d-flex align-items-center">
+                                <input type="checkbox" checked="@SelectedEmployeeIds.Contains(employee.emp_Id)"
+                                       @onchange="(e) => ToggleEmployeeSelection(employee.emp_Id, e)" class="me-2" />
+                                @employee.employee_Name
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            
+
+            <div class="modal-input">
+                <label>Tags:</label>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        Select Tags
+                    </button>
+                    <ul class="dropdown-menu">
+                        @foreach (var tag in tags)
+                        {
+                            <li class="dropdown-item" style="display: flex; align-items: center;">
+                                <input type="checkbox" checked="@SelectedTagIds.Contains(tag.tag_Id)"
+                                       @onchange="(e) => ToggleTagSelection(tag.tag_Id, e)" style="margin-right: 8px;" />
+                                @tag.tag_Name
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
              <div class="modal-input">
                  <label>Status Name:</label>
                  <select @onchange="OnStatusSelectionChanged">
@@ -207,23 +214,62 @@
 
 
 
-@code {
-  
 
+@code {
+
+ 
+
+
+
+    private List<TaskModelList> Tasks = new();
+    private List<TaskModelList> NewTasks = new();
+    private List<TaskModelList> ActiveTasks = new();
+    private List<TaskModelList> CompletedTasks = new();
     private string error = ""; 
     private TaskModel NewTask = new TaskModel();
     private List<Employees> EmployeeList = new();
-    private List<int> SelectedEmployeeIds = new();
-    private List<int> SelectedTagId = new();
+    private List<int> SelectedEmployeeIds { get; set; } = new();
+    private List<int> SelectedTagIds { get; set; } = new();
     private List<int> SelectedStatusId=new();
     private bool IsNewTaskModalVisible = false;
     private List<TaskStatusss> statuses = new List<TaskStatusss>();
     public HttpClient httpClient = new HttpClient();
     List<Employees> employees = new List<Employees>();
     List<Tags> tags = new List<Tags>();
+
+
+
+    private void ToggleTagSelection(int tagId, ChangeEventArgs e)
+    {
+        if ((bool)e.Value!)
+        {
+            if (!SelectedTagIds.Contains(tagId))
+                SelectedTagIds.Add(tagId);
+        }
+        else
+        {
+            SelectedTagIds.Remove(tagId);
+        }
+    }
+
+
+    private void ToggleEmployeeSelection(int empId, ChangeEventArgs e)
+    {
+        if ((bool)e.Value!)
+        {
+            if (!SelectedEmployeeIds.Contains(empId))
+                SelectedEmployeeIds.Add(empId);
+        }
+        else
+        {
+            SelectedEmployeeIds.Remove(empId);
+        }
+    }
+
+
     protected override async Task OnInitializedAsync()
     {
-
+       Tasks = await httpClient.GetFromJsonAsync<List<TaskModelList>>("https://localhost:7083/getTasks");
 
         var response = await httpClient.GetFromJsonAsync<EmployeeResponse>("https://localhost:7083/getemployees");
         if (response.value != null)
@@ -243,7 +289,7 @@
             statuses = Statusresponse.value.ToList();
             StateHasChanged();
         }
-
+        CategorizeTasks();
 
     }
 
@@ -251,18 +297,14 @@
     public async void AddNewTask()
     {
         NewTask.EmployeeTasks = SelectedEmployeeIds.Select(id => new EmployeeTasks { EmpId = id }).ToList();
-
-        if (SelectedTagId.Count > 0)
+        // NewTask.EmployeeTasks.Add = NewTask.Task_Id
+        if (SelectedTagIds.Count > 0)
         {
-            NewTask.TaskTags = SelectedTagId.Select(id => new TaskTag { TagId = id }).ToList();
+            NewTask.TaskTags = SelectedTagIds.Select(id => new TaskTag { TagId = id }).ToList();
         }
 
         NewTask.TaskStatuses = SelectedStatusId.Select(id => new TaskStatuses { StatusId = id }).ToList();
-      
 
-        
-
-      
 
         NewTask.Deadline = NewTask.TimeStamp.ToString("yyyy-MM-dd");
 
@@ -273,11 +315,13 @@
         {
             Console.WriteLine("Task added successfully!");
             CloseNewTaskModal();
+            await OnInitializedAsync();
+           
         }
         else
         {
             Console.WriteLine("Error adding task.");
-          //  error = response.Body.ReadAsStringAsync();
+         
             StateHasChanged();
         }
     }
@@ -292,29 +336,9 @@
         StateHasChanged();
     } 
 
-    private void OnEmployeeSelectionChanged(ChangeEventArgs e)
-    {
-        if (e.Value is string selectedValue)
-        {
-            int empId = int.Parse(selectedValue);
-            if (!SelectedEmployeeIds.Contains(empId))
-            {
-                SelectedEmployeeIds.Add(empId);
-            }
-        }
-    }
+    
 
-    private void OnTagSelectionChanged(ChangeEventArgs e)
-    {
-        if (e.Value is string selectedValue)
-        {
-            int tagId = int.Parse(selectedValue);
-            if (!SelectedTagId.Contains(tagId))
-            {
-                SelectedTagId.Add(tagId);
-            }
-        }
-    }
+   
 
     private void OnStatusSelectionChanged(ChangeEventArgs e)
     {
@@ -328,9 +352,21 @@
         }
     }
 
+    private void CategorizeTasks()
+    {
+        NewTasks = Tasks.Where(task => task.TaskStatuses.Any(s => s.StatusId == 2)).ToList();
+        ActiveTasks = Tasks.Where(task => task.TaskStatuses.Any(s => s.StatusId == 1)).ToList();
+        CompletedTasks = Tasks.Where(task => task.TaskStatuses.Any(s => s.StatusId == 3)).ToList();
+
+        StateHasChanged();
+    }
+
+
    
 
 } 
+
+
 
 
 
