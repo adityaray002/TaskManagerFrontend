@@ -2,7 +2,7 @@
 @using MudBlazor
 @rendermode InteractiveServer
 @using TaskManager_Frontend.Data
-@inject IJSRuntime JSRuntime
+
 <MudAppBar Fixed="false" Style="background-color : #ffffff;">
     
     <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Dark" Edge="Edge.Start" />
@@ -83,47 +83,46 @@
                 </div>
             </div>
 
+
             <div class="d-flex justify-content-between col-3 w-100" style="background-color:#f4f4f4;height:100vh">
                 <!-- New Tasks Column -->
-                <div class="col mb-2 mt-2">
-                    <div class="d-flex align-items-center" style="height:16%">
+                <div class="col mb-1 mt-1 d-flex flex-column">
+                    <div class="d-flex align-items-center" style="height:12%">
                         <button @onclick="ShowNewTaskModal">
                             <img src="create.svg" alt="" style="width:20px;height:20px;margin-left:30px; margin-top:30px;" />
                             <p class="ps-2 fw-bold" style="margin-top:45px;color:#34a853">New</p>
                         </button>
                     </div>
-                    <div class="col">
+                    <div class="col task-board overflow-auto" style="max-height: 90vh;scrollbar-width: none;">
                         @foreach (var task in NewTasks)
                         {
-                            <TaskCard TaskData="@task" />
+                            <TaskCard TaskData="@task" StatusColor="@GetStatusColor(2)" />
                         }
                     </div>
-                   
-
                 </div>
-                    <!-- New Tasks -->
-              
+
                 <!-- Active Tasks Column -->
-                <div class="col mb-2 mt-2 ">
-                    @foreach (var task in ActiveTasks)
-                    {
-                            <TaskCard TaskData="@task" />
-                        
-                    }
+                <div class="col mb-2 mt-2 d-flex flex-column">
+                    <div class="col task-board overflow-auto" style="max-height: 90vh;scrollbar-width: none;">
+                        @foreach (var task in ActiveTasks)
+                        {
+                            <TaskCard TaskData="@task" StatusColor="@GetStatusColor(1)" />
+                        }
+                    </div>
                 </div>
-
-                       
 
                 <!-- Completed Tasks Column -->
-                <div class="col mb-2 mt-2 ">
-                    @foreach (var task in CompletedTasks)
-                    {
-                        <TaskCard TaskData="@task" />
-                    }
+                <div class="col mb-2 mt-2 d-flex flex-column">
+                    <div class="col task-board overflow-auto" style="max-height: 90vh;scrollbar-width: none;">
+                        @foreach (var task in CompletedTasks)
+                        {
+                            <TaskCard TaskData="@task" StatusColor="@GetStatusColor(3)" />
+                        
+                        }
+                    </div>
                 </div>
-             
+            </div>
 
-        </div>
 
     </div>
 </div>
@@ -182,15 +181,18 @@
                 </div>
             </div>
 
-             <div class="modal-input">
-                 <label>Status Name:</label>
-                 <select @onchange="OnStatusSelectionChanged">
-                     @foreach (var status in statuses)
-                     {
-                         <option value="@status.Status_Id">@status.Status_Name</option>
-                     }
-                 </select>
-             </div>
+ 
+
+              <div class="modal-input">
+                  <label>Status Name:</label>
+                <select @onchange="OnStatusSelectionChanged">
+                    <option value="" disabled selected>-- Select Status --</option>
+                      @foreach (var status in statuses)
+                      {
+                          <option value="@status.Status_Id">@status.Status_Name</option>
+                      }
+                  </select>
+              </div>
            
 
           
@@ -212,15 +214,8 @@
 }
 
 
-
-
-
 @code {
-
- 
-
-
-
+    
     private List<TaskModelList> Tasks = new();
     private List<TaskModelList> NewTasks = new();
     private List<TaskModelList> ActiveTasks = new();
@@ -236,8 +231,7 @@
     public HttpClient httpClient = new HttpClient();
     List<Employees> employees = new List<Employees>();
     List<Tags> tags = new List<Tags>();
-
-
+    
 
     private void ToggleTagSelection(int tagId, ChangeEventArgs e)
     {
@@ -361,8 +355,16 @@
         StateHasChanged();
     }
 
-
-   
+    private string GetStatusColor(int statusId)
+    {
+        return statusId switch
+        {
+            1 => "orange",   // Active
+            2 => "aqua",    // In Progress
+            3 => "Green",     // Completed
+            _ => "gray"     // Default
+        };
+    }
 
 } 
 

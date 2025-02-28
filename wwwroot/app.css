@@ -152,11 +152,37 @@ h1:focus {
 
 
 
-.task-card {
+/*.task-card {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}*/
+
+.task-board {
+    max-height: 90vh; /* Ensures scrolling works */
+    overflow-y: scroll; /* Enables scrolling */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
 
+    .task-board::-webkit-scrollbar {
+        display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+    }
+
+
+.task-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.task-column {
+    width: 30%;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+}
 
 

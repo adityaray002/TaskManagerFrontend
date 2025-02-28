@@ -1,52 +1,53 @@
-﻿@using System.Globalization
-@using Microsoft.AspNetCore.Components
-@using TaskManager_Frontend.Data
-<div class="card task-card mb-4 " style="width:21rem;">
-    <div style="width:10px;height:100%;background-color:@GetStatusColor(TaskData.Status);position:absolute;"></div>
+﻿
+ @using System.Globalization
+ @using TaskManager_Frontend.Data
+
+<div class="card task-card mb-4" style="width: 21rem; border-left: 5px solid @StatusColor;">
+    <!-- Status Indicator -->
+    <div style="width: 10px; height: 100%; position: absolute; left: 0;"></div>
+
     <div class="card-body ms-2">
-        <h5 class="card-title">@TaskData.Task_Title</h5>
+        <h5 class="card-title">@TaskData?.Task_Title</h5>
+
         <p class="card-text text-muted">
-            <strong>Deadline:</strong> @TaskData.Deadline.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)
+            <strong>Deadline:</strong> @(TaskData?.Deadline.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) ?? "N/A")
         </p>
 
-        <ul class="list-group list-group-flush">
-            @foreach (var employeeTask in TaskData.EmployeeTasks)
-            {
-                <li class="list-group-item">
-                    <div class="d-flex align-items-center">
-                        <MudAvatar Size="Size.Small" Color="Color.Primary" Class="me-2">A</MudAvatar>
-                        <span>@employeeTask.Employee.Employee_Name</span>
-                    </div>
-                </li>
-            }
-        </ul>
+        <!-- Assigned Employees -->
+        @if (TaskData?.EmployeeTasks != null && TaskData.EmployeeTasks.Any())
+        {
+            <ul class="list-group list-group-flush">
+                @foreach (var employeeTask in TaskData.EmployeeTasks)
+                {
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <MudAvatar Size="Size.Small" Color="Color.Primary" Class="me-2">A</MudAvatar>
+                            <span>@employeeTask.Employee?.Employee_Name</span>
+                        </div>
+                    </li>
+                }
+            </ul>
+        }
 
-  
-
-       
-        <div class="d-flex flex-wrap">
-            @foreach (var tag in TaskData.TaskTags)
-            {
-                <span class="badge bg-primary me-2">@tag.Tag.Tag_Name</span>
-            }
-        </div>
-
-  
-
-       
+        <!-- Task Tags -->
+        @if (TaskData?.TaskTags != null && TaskData.TaskTags.Any())
+        {
+            <div class="d-flex flex-wrap mt-2">
+                @foreach (var tag in TaskData.TaskTags)
+                {
+                    <span class="badge bg-primary me-2">@tag.Tag?.Tag_Name</span>
+                }
+            </div>
+        }
     </div>
 </div>
 
 @code {
-    [Parameter] public TaskModelList TaskData { get; set; }
-    private string GetStatusColor(string status)
-    {
-        return status switch
-        {
-            "Active" => "blue",
-            "InProgress" => "yellow",
-            "Completed" => "green",
-            _ => "aqua" // Default color
-        };
-    }
+    [Parameter]
+    public TaskModelList? TaskData { get; set; }
+
+    [Parameter] 
+    public string StatusColor { get; set; }
+  
+
 }
