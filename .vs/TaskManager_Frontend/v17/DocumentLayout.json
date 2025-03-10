@@ -7,84 +7,116 @@
       "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\pages\\taskcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\pages\\taskcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\wwwroot\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:wwwroot\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\taskmodellist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\taskmodellist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\tags.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\tags.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\taskstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\taskstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\taskstatusss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\taskstatusss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\tasktag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\tasktag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\taskstatusss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\taskstatusss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\employeetasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\employeetasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\tagresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\tagresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\taskmodellist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\taskmodellist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\taskstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\taskstatuses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\statusresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\statusresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\employeeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\employeeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\employees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\employeetasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\employeetasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\tasktag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\tasktag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\tags.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\tags.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\pages\\taskcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\pages\\taskcard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\pages\\taskinput.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\pages\\taskinput.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\taskmodeldrag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\taskmodeldrag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\taskstatusupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\taskstatusupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\wwwroot\\favicon.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:wwwroot\\favicon.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\tagresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\tagresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\data\\employeeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|solutionrelative:data\\employeeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7EF2C681-CDAE-4F14-A487-31C8B64471D7}|TaskManager_Frontend.csproj|h:\\entity framework core\\taskmanager_frontend\\taskmanager_frontend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -114,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 28,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -131,14 +163,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Tags.cs",
-              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\Tags.cs",
-              "RelativeDocumentMoniker": "Data\\Tags.cs",
-              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\Tags.cs",
-              "RelativeToolTip": "Data\\Tags.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "TaskStatuses.cs",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskStatuses.cs",
+              "RelativeDocumentMoniker": "Data\\TaskStatuses.cs",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskStatuses.cs",
+              "RelativeToolTip": "Data\\TaskStatuses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T06:35:14.957Z",
+              "WhenOpened": "2025-02-24T15:49:06.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskStatusss.cs",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskStatusss.cs",
+              "RelativeDocumentMoniker": "Data\\TaskStatusss.cs",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskStatusss.cs",
+              "RelativeToolTip": "Data\\TaskStatusss.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T13:57:57.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashBoard.razor",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\DashBoard.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\DashBoard.razor",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\DashBoard.razor",
+              "RelativeToolTip": "Components\\Pages\\DashBoard.razor",
+              "ViewState": "AgIAAFkBAAAAAAAAAAAowF4BAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T04:31:09.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T04:46:28.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T04:38:39.937Z",
               "EditorCaption": ""
             },
             {
@@ -149,40 +233,31 @@
               "RelativeDocumentMoniker": "Data\\TaskModelList.cs",
               "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskModelList.cs",
               "RelativeToolTip": "Data\\TaskModelList.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAUwC8AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwC0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T15:21:05.043Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TaskCard.razor",
-              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\TaskCard.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\TaskCard.razor",
-              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\TaskCard.razor",
-              "RelativeToolTip": "Components\\Pages\\TaskCard.razor",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-27T15:18:37.551Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "TaskModel.cs",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskModel.cs",
               "RelativeDocumentMoniker": "Data\\TaskModel.cs",
               "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskModel.cs",
               "RelativeToolTip": "Data\\TaskModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwA4AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T12:28:39.674Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 7,
               "Title": "StatusResponse.cs",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\StatusResponse.cs",
               "RelativeDocumentMoniker": "Data\\StatusResponse.cs",
@@ -190,59 +265,156 @@
               "RelativeToolTip": "Data\\StatusResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:59:07.436Z"
+              "WhenOpened": "2025-02-24T15:59:07.436Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TaskStatuses.cs",
-              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskStatuses.cs",
-              "RelativeDocumentMoniker": "Data\\TaskStatuses.cs",
-              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskStatuses.cs",
-              "RelativeToolTip": "Data\\TaskStatuses.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:49:06.708Z"
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-04T15:32:50.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TaskStatusss.cs",
-              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskStatusss.cs",
-              "RelativeDocumentMoniker": "Data\\TaskStatusss.cs",
-              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskStatusss.cs",
-              "RelativeToolTip": "Data\\TaskStatusss.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAvAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "TaskModelDrag.cs",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskModelDrag.cs",
+              "RelativeDocumentMoniker": "Data\\TaskModelDrag.cs",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskModelDrag.cs",
+              "RelativeToolTip": "Data\\TaskModelDrag.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T13:57:57.967Z"
+              "WhenOpened": "2025-03-04T16:36:12.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Home.razor",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-04T17:04:11.956Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "Weather.razor",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Weather.razor",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\Weather.razor",
+              "RelativeToolTip": "Components\\Pages\\Weather.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-04T17:05:09.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TaskInput.razor",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\TaskInput.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\TaskInput.razor",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\TaskInput.razor",
+              "RelativeToolTip": "Components\\Pages\\TaskInput.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T14:21:18.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-04T15:32:33.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TaskStatusUpdateModel.cs",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskStatusUpdateModel.cs",
+              "RelativeDocumentMoniker": "Data\\TaskStatusUpdateModel.cs",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskStatusUpdateModel.cs",
+              "RelativeToolTip": "Data\\TaskStatusUpdateModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T06:16:23.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "favicon.png - PNG [32x32, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\favicon.png",
+              "RelativeDocumentMoniker": "wwwroot\\favicon.png",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\favicon.png - PNG [32x32, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\favicon.png - PNG [32x32, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-01T05:39:40.086Z",
+              "EditorCaption": " - PNG [32x32, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Tags.cs",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\Tags.cs",
+              "RelativeDocumentMoniker": "Data\\Tags.cs",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\Tags.cs",
+              "RelativeToolTip": "Data\\Tags.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T06:35:14.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TaskCard.razor",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\TaskCard.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\TaskCard.razor",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\TaskCard.razor",
+              "RelativeToolTip": "Components\\Pages\\TaskCard.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-27T15:18:37.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "TaskTag.cs",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskTag.cs",
               "RelativeDocumentMoniker": "Data\\TaskTag.cs",
               "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TaskTag.cs",
               "RelativeToolTip": "Data\\TaskTag.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T13:57:31.495Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 9,
               "Title": "EmployeeTasks.cs",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\EmployeeTasks.cs",
               "RelativeDocumentMoniker": "Data\\EmployeeTasks.cs",
               "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\EmployeeTasks.cs",
               "RelativeToolTip": "Data\\EmployeeTasks.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T13:57:08.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 27,
               "Title": "TagResponse.cs",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\TagResponse.cs",
               "RelativeDocumentMoniker": "Data\\TagResponse.cs",
@@ -254,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 28,
               "Title": "EmployeeResponse.cs",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\EmployeeResponse.cs",
               "RelativeDocumentMoniker": "Data\\EmployeeResponse.cs",
@@ -266,19 +438,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 8,
               "Title": "Employees.cs",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\Employees.cs",
               "RelativeDocumentMoniker": "Data\\Employees.cs",
               "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Data\\Employees.cs",
               "RelativeToolTip": "Data\\Employees.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T10:40:25.215Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 29,
               "Title": "TaskManager_Frontend.csproj",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\TaskManager_Frontend.csproj",
               "RelativeDocumentMoniker": "TaskManager_Frontend.csproj",
@@ -290,20 +462,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 21,
               "Title": "site.js",
-              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\site.js",
-              "RelativeDocumentMoniker": "wwwroot\\site.js",
-              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\site.js",
-              "RelativeToolTip": "wwwroot\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAACAAAAAAAAAA==",
+              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-24T10:28:28.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T10:28:28.645Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 25,
               "Title": "Routes.razor",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Routes.razor",
               "RelativeDocumentMoniker": "Components\\Routes.razor",
@@ -315,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "create.svg",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\create.svg",
               "RelativeDocumentMoniker": "wwwroot\\create.svg",
@@ -327,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 32,
               "Title": "create (1).svg",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\create (1).svg",
               "RelativeDocumentMoniker": "wwwroot\\create (1).svg",
@@ -339,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 33,
               "Title": "Counter.razor",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Counter.razor",
@@ -351,20 +522,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 17,
               "Title": "app.css",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\app.css",
               "RelativeDocumentMoniker": "wwwroot\\app.css",
               "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\app.css",
               "RelativeToolTip": "wwwroot\\app.css",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAAAKkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAIwLsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-21T04:51:10.591Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T04:51:10.591Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 30,
               "Title": "bootstrap.min.css",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\bootstrap\\bootstrap.min.css",
               "RelativeDocumentMoniker": "wwwroot\\bootstrap\\bootstrap.min.css",
@@ -376,43 +546,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
-              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-21T04:46:28.029Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T04:39:27.165Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
-              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-21T04:38:39.937Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 26,
               "Title": "_Imports.razor",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\_Imports.razor",
               "RelativeDocumentMoniker": "Components\\_Imports.razor",
@@ -424,33 +570,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 22,
               "Title": "App.razor",
               "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\App.razor",
               "RelativeDocumentMoniker": "Components\\App.razor",
               "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\App.razor",
               "RelativeToolTip": "Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAAB8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-21T04:36:53.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DashBoard.razor",
-              "DocumentMoniker": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\DashBoard.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\DashBoard.razor",
-              "ToolTip": "H:\\Entity Framework core\\TaskManager_Frontend\\Components\\Pages\\DashBoard.razor",
-              "RelativeToolTip": "Components\\Pages\\DashBoard.razor",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAHMAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-21T04:31:09.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "WhenOpened": "2025-02-21T04:36:53.318Z"
             }
           ]
         }

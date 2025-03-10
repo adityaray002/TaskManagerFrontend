@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uiA/0F/XZKUtSGTUI7poxqctueZsicSjPzG9/Ds6hAo=",
+  "Hash": "DLdUzAyZ4K7Tk2UvmfJUt536AzAPZ+wMhPOOVhkV5Jk=",
   "Source": "TaskManager_Frontend",
   "BasePath": "_content/TaskManager_Frontend",
   "Mode": "Default",
@@ -207,12 +207,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\site.js",
+      "Identity": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\js\\site.js",
       "SourceId": "TaskManager_Frontend",
       "SourceType": "Discovered",
       "ContentRoot": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\",
       "BasePath": "_content/TaskManager_Frontend",
-      "RelativePath": "site.js",
+      "RelativePath": "js/site.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -223,7 +223,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
     }
   ]
 }

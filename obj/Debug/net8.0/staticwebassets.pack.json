@@ -29,8 +29,8 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\site.js",
-      "PackagePath": "staticwebassets\\site.js"
+      "Id": "H:\\Entity Framework core\\TaskManager_Frontend\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TaskManager_Frontend.Microsoft.AspNetCore.StaticWebAssets.props",

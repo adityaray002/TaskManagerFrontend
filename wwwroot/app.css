@@ -185,4 +185,47 @@ h1:focus {
     min-height: 300px;
 }
 
+.task-board {
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+    scrollbar-width: none;
+}
 
+.task-card {
+    cursor: grab;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.dropdown-menu {
+    max-height: 200px; /* Scrollable dropdown */
+    overflow-y: auto;
+    width: 220px; /* Adjust width as needed */
+    padding: 8px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between checkbox and text */
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+    .dropdown-item:hover {
+        background-color: #f1f1f1;
+    }
+
+input[type="checkbox"] {
+    flex-shrink: 0; /* Prevent checkbox from resizing */
+    width: 16px;
+    height: 16px;
+    margin: 0; /* Remove default margins */
+}

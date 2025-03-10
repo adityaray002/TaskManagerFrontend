@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Components.Server;
 using MudBlazor.Services;
 using TaskManager_Frontend.Components;
 using TaskManager_Frontend.Data;
@@ -19,6 +20,7 @@ builder.Services.AddScoped<TaskTag>();
 builder.Services.AddScoped<TaskStatusss>();
 builder.Services.AddScoped<EmployeeTasks>();
 builder.Services.AddScoped<TaskStatuses>();
+
 
 var app = builder.Build();
 

@@ -1,17 +1,30 @@
 ﻿
  @using System.Globalization
  @using TaskManager_Frontend.Data
+ @inject IJSRuntime JS
 
-<div class="card task-card mb-4" style="width: 21rem; border-left: 5px solid @StatusColor;">
+<div class="card task-card mb-4" style="width: 21rem; border-left: 5px solid @StatusColor;"    draggable="true">
     <!-- Status Indicator -->
     <div style="width: 10px; height: 100%; position: absolute; left: 0;"></div>
 
     <div class="card-body ms-2">
-        <h5 class="card-title">@TaskData?.Task_Title</h5>
+        <div class="d-flex  justify-content-between">
+            <div>
+                <h5 class="card-title">@TaskData?.Task_Title</h5>
 
-        <p class="card-text text-muted">
-            <strong>Deadline:</strong> @(TaskData?.Deadline.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) ?? "N/A")
-        </p>
+                <p class="card-text text-muted">
+                    <strong>Deadline:</strong> @(TaskData?.Deadline.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) ?? "N/A")
+                </p>
+            </div>
+            <div>
+                <button @onclick="() => EditTask(TaskData)">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+            </div>
+           
+        </div>
+        
+        
 
         <!-- Assigned Employees -->
         @if (TaskData?.EmployeeTasks != null && TaskData.EmployeeTasks.Any())
@@ -43,11 +56,36 @@
 </div>
 
 @code {
+    private IJSObjectReference? jsModule;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            jsModule = await JS.InvokeAsync<IJSObjectReference>("import", "./js/site.js");
+        }
+    }
     [Parameter]
     public TaskModelList? TaskData { get; set; }
 
     [Parameter] 
     public string StatusColor { get; set; }
-  
+
+
+    private async Task OnDragStart(DragEventArgs e, int taskId)
+    {
+        await JS.InvokeVoidAsync("setDraggedData", taskId);
+    }
+
+    [Parameter] public EventCallback<TaskModelList> OnEditTask { get; set; }
+
+    private async Task EditTask(TaskModelList task)
+    {
+        await OnEditTask.InvokeAsync(task);
+    }
 
 }
+
+
+
+

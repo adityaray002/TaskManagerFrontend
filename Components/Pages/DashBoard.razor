@@ -1,13 +1,20 @@
-﻿ @page "/dashboard"
+﻿@page "/dashboard"
+ @using System.Globalization
 @using MudBlazor
 @rendermode InteractiveServer
 @using TaskManager_Frontend.Data
 
+
+@using Microsoft.AspNetCore.Components;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Threading.Tasks;
+@inject IJSRuntime JS
 <MudAppBar Fixed="false" Style="background-color : #ffffff;">
-    
+
     <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Dark" Edge="Edge.Start" />
     <MudSpacer />
-   
+
     <MudBadge Color="Color.Success" Overlap="true" Bordered="true">
         <MudAvatar>
             <MudImage Src="images/mony.jpg" />
@@ -15,19 +22,20 @@
     </MudBadge>
 </MudAppBar>
 
-<div class="container-fluid" >
+
+<div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 " style="background-color:#eaeaea;">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                 <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-black text-decoration-none">
                     <span class="fs-7 d-none d-sm-inline mt-2" style="text-decoration:dashed">
-                        <div class="d-flex">  
+                        <div class="d-flex">
                             <div> <MudAvatar Size="Size.Medium" Color="Color.Primary">S</MudAvatar></div>
                             <div>
                                 <p Style="margin-left:10px;margin-top:10px;" class="fw-bold">SCG</p>
                             </div>
                         </div>
-                      
+
                     </span>
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
@@ -40,19 +48,24 @@
                         <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline" style="color:black">Dashboard</span>
                         </a>
-                       
+
                     </li>
                     <li>
                         <a href="#" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline" style="color:black">Orders</span>
                         </a>
                     </li>
-                   
-                    
+
+
                     <li>
                         <a href="#" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color:black">Customers</span>
                         </a>
+                    </li>
+                    <li>
+                        <button class="btn btn-primary w-100 mt-2" @onclick="ToggleSort">
+                            @FilterButtonText
+                        </button>
                     </li>
                 </ul>
                 <hr>
@@ -62,7 +75,7 @@
                         <span class="d-none d-sm-inline mx-1" style="color:black">Aditya Ray</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                       
+
                         <li><a class="dropdown-item" href="#">Sign out</a></li>
                     </ul>
                 </div>
@@ -85,82 +98,93 @@
 
 
             <div class="d-flex justify-content-between col-3 w-100" style="background-color:#f4f4f4;height:100vh">
-                <!-- New Tasks Column -->
-                <div class="col mb-1 mt-1 d-flex flex-column">
+
+                <div class="col mb-1 mt-1 d-flex flex-column background-color:red" >
                     <div class="d-flex align-items-center" style="height:12%">
                         <button @onclick="ShowNewTaskModal">
                             <img src="create.svg" alt="" style="width:20px;height:20px;margin-left:30px; margin-top:30px;" />
                             <p class="ps-2 fw-bold" style="margin-top:45px;color:#34a853">New</p>
                         </button>
                     </div>
-                    <div class="col task-board overflow-auto" style="max-height: 90vh;scrollbar-width: none;">
+                    <div class="col task-board overflow-auto" style="max-height: 90vh;scrollbar-width: none; ">
                         @foreach (var task in NewTasks)
                         {
-                            <TaskCard TaskData="@task" StatusColor="@GetStatusColor(2)" />
+                            <TaskCard TaskData="@task" StatusColor="@GetStatusColor(2)" OnEditTask="EditTask" />
                         }
                     </div>
                 </div>
 
-                <!-- Active Tasks Column -->
-                <div class="col mb-2 mt-2 d-flex flex-column">
+
+                <div class="col mb-2 mt-2 d-flex flex-column" >
                     <div class="col task-board overflow-auto" style="max-height: 90vh;scrollbar-width: none;">
                         @foreach (var task in ActiveTasks)
                         {
-                            <TaskCard TaskData="@task" StatusColor="@GetStatusColor(1)" />
+
+                            <TaskCard TaskData="@task" StatusColor="@GetStatusColor(1)" OnEditTask="EditTask" />
+
+
                         }
                     </div>
                 </div>
 
-                <!-- Completed Tasks Column -->
-                <div class="col mb-2 mt-2 d-flex flex-column">
+
+                <div class="col mb-2 mt-2 d-flex flex-column" >
                     <div class="col task-board overflow-auto" style="max-height: 90vh;scrollbar-width: none;">
                         @foreach (var task in CompletedTasks)
                         {
-                            <TaskCard TaskData="@task" StatusColor="@GetStatusColor(3)" />
-                        
+                            <TaskCard TaskData="@task" StatusColor="@GetStatusColor(3)" OnEditTask="EditTask" />
+
                         }
                     </div>
                 </div>
             </div>
 
 
+
+
+
+
+        </div>
     </div>
-</div>
 </div>
 
 @if (IsNewTaskModalVisible)
 {
     <div class="modal-overlay">
         <div class="modal-box">
-            <h3>Add New Task</h3>
+            <h3>@(IsEditMode ? "Update Task" : "Add Task")</h3>
             <div class="modal-input">
                 <label>Task Title:</label>
                 <input @bind="NewTask.Task_Title" type="text" placeholder="Enter task title..." />
             </div>
-           <div class="modal-input">
-                 <label>Deadline:</label>
-                 <input @bind="NewTask.TimeStamp" type="date" />
-             </div>
-
             <div class="modal-input">
-                <label>Employee Name:</label>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                        Select Employees
-                    </button>
-                    <ul class="dropdown-menu" style="width:100%;">
-                        @foreach (var employee in employees)
-                        {
-                            <li class="dropdown-item d-flex align-items-center">
-                                <input type="checkbox" checked="@SelectedEmployeeIds.Contains(employee.emp_Id)"
-                                       @onchange="(e) => ToggleEmployeeSelection(employee.emp_Id, e)" class="me-2" />
-                                @employee.employee_Name
-                            </li>
-                        }
-                    </ul>
-                </div>
+                <label>Deadline:</label>
+                <input @bind="NewTask.TimeStamp" type="date" />
             </div>
-            
+
+
+            <div class="text-center bg-blue-100 modal-input">
+                <input class="border-4 w-100
+               border-blue-300 mt-2" @bind-value="SearchText"
+                       @bind-value:event="oninput" placeholder="Search Employee Name" />
+
+
+            </div>
+            @if (!String.IsNullOrEmpty(SearchText))
+            {
+                <ul>
+                    @foreach (var emp in FilteredEmployees)
+                    {
+                        @* <p>@emp.employee_Name</p> *@
+                        <li class="dropdown-item d-flex align-items-center">
+                            <input type="checkbox" checked="@SelectedEmployeeIds.Contains(emp.emp_Id)"
+                                   @onchange="(e) => ToggleEmployeeSelection(emp.emp_Id, e)" class="me-2" />
+                            @emp.employee_Name
+                        </li>
+                    }
+                </ul>
+            }
+
 
             <div class="modal-input">
                 <label>Tags:</label>
@@ -176,62 +200,88 @@
                                        @onchange="(e) => ToggleTagSelection(tag.tag_Id, e)" style="margin-right: 8px;" />
                                 @tag.tag_Name
                             </li>
+
+
                         }
                     </ul>
                 </div>
             </div>
 
- 
 
-              <div class="modal-input">
-                  <label>Status Name:</label>
+
+            <div class="modal-input">
+                <label>Status Name:</label>
                 <select @onchange="OnStatusSelectionChanged">
                     <option value="" disabled selected>-- Select Status --</option>
-                      @foreach (var status in statuses)
-                      {
-                          <option value="@status.Status_Id">@status.Status_Name</option>
-                      }
-                  </select>
-              </div>
-           
+                    @foreach (var status in statuses)
+                    {
+                        <option value="@status.Status_Id">@status.Status_Name</option>
+                    }
+                </select>
+            </div>
 
-          
 
-        
+
+
+
 
             <div class="modal-actions">
-                <button class="btn add-btn" @onclick="AddNewTask">Add</button>
+
+                <button @onclick="SaveTask" class="btn add-btn">@(IsEditMode ? "Update" : "Add")</button>
                 <button class="btn cancel-btn" @onclick="CloseNewTaskModal">Cancel</button>
-                @if (@error.Length>0)
+                @if (@error.Length > 0)
                 {
                     <p>@error</p>
                 }
-              
+
             </div>
         </div>
     </div>
-    
+
 }
+<script>
+    window.allowDrop = function (event) {
+        event.preventDefault();
+    };
+
+</script>
 
 
 @code {
-    
-    private List<TaskModelList> Tasks = new();
+    private int DraggedTaskId;
+
+    [Parameter]
+    public TaskModelList? TaskData { get; set; }
+    [Parameter]
+    public string StatusColor { get; set; }
+    private bool IsSorted = false;
+    private string FilterButtonText = "Sort by Nearest Date";
+    // private List<TaskResponse> OriginalTasks = new();
+
+    private TaskResponse Tasks = new();
     private List<TaskModelList> NewTasks = new();
     private List<TaskModelList> ActiveTasks = new();
     private List<TaskModelList> CompletedTasks = new();
-    private string error = ""; 
+    private string error = "";
     private TaskModel NewTask = new TaskModel();
     private List<Employees> EmployeeList = new();
+    private bool IsEditMode = false;
     private List<int> SelectedEmployeeIds { get; set; } = new();
     private List<int> SelectedTagIds { get; set; } = new();
-    private List<int> SelectedStatusId=new();
+    private int SelectedStatusId=1;
     private bool IsNewTaskModalVisible = false;
     private List<TaskStatusss> statuses = new List<TaskStatusss>();
     public HttpClient httpClient = new HttpClient();
     List<Employees> employees = new List<Employees>();
     List<Tags> tags = new List<Tags>();
-    
+    public string SearchText { get; set; } = "";
+
+    private List<Employees> FilteredEmployees => employees
+        .Where(employees => employees.employee_Name.ToLower().Contains(SearchText.ToLower()))
+        .ToList();
+
+
+
 
     private void ToggleTagSelection(int tagId, ChangeEventArgs e)
     {
@@ -263,7 +313,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-       Tasks = await httpClient.GetFromJsonAsync<List<TaskModelList>>("https://localhost:7083/getTasks");
+        Tasks = await httpClient.GetFromJsonAsync<TaskResponse>("https://localhost:7083/getTasks");
 
         var response = await httpClient.GetFromJsonAsync<EmployeeResponse>("https://localhost:7083/getemployees");
         if (response.value != null)
@@ -286,7 +336,35 @@
         CategorizeTasks();
 
     }
+    private void ToggleSort()
+    {
+        if (IsSorted)
+        {
+            // Restore original order
+            CategorizeTasks();
+            FilterButtonText = "Filter";
+        }
+        else
+        {
+            // Sort by deadline
+            CategorizeTasksDeadline();
+            FilterButtonText = "Sort To Original";
+        }
 
+        IsSorted = !IsSorted;
+        StateHasChanged();
+    }
+
+    private void CategorizeTasksDeadline()
+    {
+        if (Tasks?.Value == null) return;
+
+        NewTasks = Tasks.Value.Where(task => task.TaskStatus?.Id == 1).OrderBy(task => task.Deadline).ToList();
+        ActiveTasks = Tasks.Value.Where(task => task.TaskStatus?.Id == 2).OrderBy(task => task.Deadline).ToList();
+        CompletedTasks = Tasks.Value.Where(task => task.TaskStatus?.Id == 3).OrderBy(task => task.Deadline).ToList();
+
+        StateHasChanged();
+    }
 
     public async void AddNewTask()
     {
@@ -297,7 +375,10 @@
             NewTask.TaskTags = SelectedTagIds.Select(id => new TaskTag { TagId = id }).ToList();
         }
 
-        NewTask.TaskStatuses = SelectedStatusId.Select(id => new TaskStatuses { StatusId = id }).ToList();
+        if (SelectedStatusId > 0) // Assuming it's a single ID, not a collection
+        {
+            NewTask.Status = new TaskStatusss { Status_Id = SelectedStatusId };
+        }
 
 
         NewTask.Deadline = NewTask.TimeStamp.ToString("yyyy-MM-dd");
@@ -308,52 +389,75 @@
         if (response.IsSuccessStatusCode)
         {
             Console.WriteLine("Task added successfully!");
-            CloseNewTaskModal();
+            ResetNewTask();
+
             await OnInitializedAsync();
-           
+            CloseNewTaskModal();
         }
         else
         {
             Console.WriteLine("Error adding task.");
-         
+
             StateHasChanged();
+        }
+    }
+    private async Task TestJSInterop()
+    {
+        try
+        {
+            await JS.InvokeVoidAsync("console.log", "Blazor JS Interop is working!");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"JS Interop error: {ex.Message}");
         }
     }
     public void ShowNewTaskModal()
     {
-        IsNewTaskModalVisible=true;
+        IsNewTaskModalVisible = true;
+        ResetNewTask();
         StateHasChanged();
     }
     private void CloseNewTaskModal()
     {
         IsNewTaskModalVisible = false;
+        IsEditMode = false;
         StateHasChanged();
-    } 
+    }
+    private void ResetNewTask()
+    {
+        NewTask = new TaskModel();
+        SelectedEmployeeIds.Clear();
+        SelectedTagIds.Clear();
+        //  SelectedStatusId.Clear();
+    }
 
-    
 
-   
+
 
     private void OnStatusSelectionChanged(ChangeEventArgs e)
     {
-        if (e.Value is string selectedValue)
+
+        if (e.Value is not null && int.TryParse(e.Value.ToString(), out int selectedStatusId))
         {
-            int statusId = int.Parse(selectedValue);
-            if (!SelectedStatusId.Contains(statusId))
-            {
-                SelectedStatusId.Add(statusId);
-            }
+            NewTask.StatusId = selectedStatusId; // Ensure task status is updated
+            StateHasChanged();
         }
     }
 
     private void CategorizeTasks()
     {
-        NewTasks = Tasks.Where(task => task.TaskStatuses.Any(s => s.StatusId == 2)).ToList();
-        ActiveTasks = Tasks.Where(task => task.TaskStatuses.Any(s => s.StatusId == 1)).ToList();
-        CompletedTasks = Tasks.Where(task => task.TaskStatuses.Any(s => s.StatusId == 3)).ToList();
+
+        if (Tasks?.Value == null) return;
+
+        NewTasks = Tasks.Value.Where(task => task.TaskStatus?.Id == 1).ToList();
+        ActiveTasks = Tasks.Value.Where(task => task.TaskStatus?.Id == 2).ToList();
+        CompletedTasks = Tasks.Value.Where(task => task.TaskStatus?.Id == 3).ToList();
 
         StateHasChanged();
     }
+
+ 
 
     private string GetStatusColor(int statusId)
     {
@@ -366,9 +470,110 @@
         };
     }
 
-} 
+
+    private void EditTask(TaskModelList task)
+    {
+        IsEditMode = true;
+
+        NewTask = new TaskModel
+            {
+                Task_Id = task.Task_Id,
+                Task_Title = task.Task_Title,
+                TimeStamp = task.Deadline,
+                EmployeeTasks = task.EmployeeTasks.Select(e => new EmployeeTasks { EmpId = e.EmpId }).ToList(),
+                TaskTags = task.TaskTags.Select(t => new TaskTag { TagId = t.TagId }).ToList(),
+                Status = new TaskStatusss { Status_Id = task.TaskStatus.Id } // ✅ Fixed status assignment
+            };
+
+        // ✅ Fix status selection (single integer, not a list)
+        SelectedEmployeeIds = task.EmployeeTasks.Select(e => e.EmpId).ToList();
+        SelectedTagIds = task.TaskTags.Select(t => t.TagId).ToList();
+        SelectedStatusId = task.TaskStatus.Id; // ✅ Fixed (single integer, not list)
+
+        IsNewTaskModalVisible = true;
+    }
+
+
+    private async Task SaveTask()
+    {
+        if (IsEditMode)
+        {
+           
+            await UpdateTask();
+        }
+        else
+        {
+            
+            AddNewTask();
+        }
+
+       
+        CloseNewTaskModal();
+    }
+
+    private async Task UpdateTask()
+    {
+        try
+        {
+            if (IsEditMode)
+            {
+               
+                NewTask.EmployeeTasks.Clear();
+                NewTask.TaskTags.Clear();
+
+              
+                
+                if(NewTask.StatusId==0)
+                {
+                    NewTask.StatusId = NewTask.Status.Status_Id;
+                }
+                else
+                {
+                    NewTask.Status = new TaskStatusss { Status_Id = SelectedStatusId };
+                }
+
+              
+                if (NewTask.TimeStamp != null)
+                {
+                    NewTask.Deadline = NewTask.TimeStamp.ToString("yyyy-MM-dd");
+                }
+
+               
+                NewTask.EmployeeTasks = SelectedEmployeeIds
+                    .Select(id => new EmployeeTasks { EmpId = id })
+                    .ToList();
+
+                NewTask.TaskTags = SelectedTagIds
+                    .Select(id => new TaskTag { TagId = id })
+                    .ToList();
+
+               
+                var response = await httpClient.PutAsJsonAsync("https://localhost:7083/update", NewTask);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine("Task updated successfully!");
+
+                  
+                    IsNewTaskModalVisible = false;
+                    await OnInitializedAsync();
+                }
+                else
+                {
+                    var errorMessage = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"Error: {errorMessage}");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Exception: {ex.Message}");
+        }
+    }
 
 
 
+
+}
 
 
